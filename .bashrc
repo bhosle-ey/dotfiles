@@ -119,7 +119,6 @@ mkcd () {
 
 # History config
 export HISTCONTROL=ignoreboth:erasedups
-export HISTIGNORE="ll*:ls*:cd*:history*"
 
 export DISPLAY=$(cat /etc/resolv.conf | grep nameserver | awk '{print $2}'):0.0
 
