@@ -3,7 +3,7 @@
 	helper = !/usr/bin/gh auth git-credential
 [user]
 	email = Saideep.Shambhu.Bhosle@gds.ey.com
-	name = bhosle-ey
+	name = Saideep Bhosle
 [init]
 	defaultBranch = master
 
