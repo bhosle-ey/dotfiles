@@ -26,11 +26,11 @@ if [ -d "$HOME/.local/bin" ] ; then
     PATH="$HOME/.local/bin:$PATH"
 fi
 
-WSLSTATUS=$(wsl.exe --list --verbose | iconv -f UTF16 -t ASCII | grep vpnkit | awk '{print $2}')
+WSLSTATUS=$(wsl.exe --list --verbose | iconv -f UTF16 -t ASCII | grep vpnkit | awk '{print $3}')
 
 if [ $WSLSTATUS == "Stopped" ]; then
     wsl.exe -d wsl-vpnkit service wsl-vpnkit start
 fi
 
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
-sudo ~/sysctl.sh
+sudo ~/sysctl.sh >/dev/null
